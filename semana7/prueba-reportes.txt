@@ -1,0 +1,23 @@
+Al probar la ruta POST /reportes, el servidor registró el reporte correctamente
+y respondió con un mensaje de confirmación junto con los datos del reporte creado.
+
+Al probar la ruta GET /reportes, el servidor respondió con un arreglo JSON que
+contiene todos los reportes registrados hasta ese momento en memoria.
+
+Respuesta obtenida al consultar GET /reportes:
+
+[
+  {
+    "id": 1,
+    "tipo": "Infraestructura",
+    "descripcion": "Daño en alumbrado público"
+  },
+  {
+    "id": 2,
+    "tipo": "Ambiente",
+    "descripcion": "Acumulación de residuos en una zona comunitaria"
+  }
+]
+
+Si se detiene el servidor y se vuelve a iniciar, la lista de reportes regresa
+vacía porque los datos solo se guardan en memoria, no en una base de datos.
